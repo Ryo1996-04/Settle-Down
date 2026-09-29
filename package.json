@@ -1,0 +1,15 @@
+{
+  "name": "settle-in",
+  "private": true,
+  "description": "Move-in checklist, budget and room planner for international students arriving in the US.",
+  "scripts": {
+    "build:en": "node build-en.cjs",
+    "serve": "node server.cjs",
+    "qa": "node qa-browser.cjs",
+    "qa:en": "node qa-english.cjs"
+  },
+  "devDependencies": {
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.62.1"
+  }
+}

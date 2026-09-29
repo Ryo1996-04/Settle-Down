@@ -1,0 +1,15 @@
+server.cjs
+qa-*
+*.png
+README.md
+.env*
+.git
+locales/
+build-en.cjs
+/package.json
+/package-lock.json
+/node_modules/
+/docs/
+/index.html
+/.github/
+*.local.md

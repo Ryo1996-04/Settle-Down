@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Settle In | Your first home away from home</title>
+  <meta name="description" content="A room-by-room shopping checklist for international students. Explore Amazon, Target, Walmart and IKEA picks, and plan furniture sizes with your floor plan.">
+  <meta name="theme-color" content="#194f45">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23194f45'/%3E%3Cpath d='M9 19L20 10L31 19V30H24V23H17V30H9Z' fill='%23dbed9b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/en/app.js"></script>
+  <script src="/language.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<aside class="sidebar">
+  <a class="brand" href="#general/all"><span class="brand-mark">s<span>i</span></span><span>settle in<small>A new place. Your own pace.</small></span></a>
+  <div class="sidebar-section">YOUR NEW CHAPTER</div>
+  <nav id="room-nav" aria-label="Browse by room"></nav>
+  <div class="sidebar-card"><span class="eyebrow">MADE FOR YOUR SPACE</span><h3>Small space.<br>Just-right choices.</h3><p>Upload a floor plan.<br>Find what fits your home.</p><a href="#customize/bedroom">Plan my room <span aria-hidden="true">↗</span></a></div>
+  <div class="sidebar-bottom"><span class="small-house">⌂</span><div>From arrival to feeling at home.<small>US shopping guide · USD</small></div></div>
+</aside>
+<div class="shell">
+  <header class="topbar"><div class="breadcrumb">My new chapter <span>/</span> <strong id="breadcrumb">Shopping planner</strong></div><div class="top-meta"><label class="language-picker"><span>US /</span><select id="language" aria-label="Language / 語言"><option value="zh">繁體中文</option><option value="en">English</option></select></label><span class="avatar" aria-label="Your personal checklist">S</span></div></header>
+  <main id="main">
+    <div class="page-heading"><div><div class="eyebrow">A LITTLE PLANNING. A BETTER BEGINNING.</div><h1>Make room for your new life<span>.</span></h1><p>From your first night to your everyday routine, find what you really need.</p></div><span class="edition">THE MOVE-IN EDITION <span>01 / UNITED STATES</span></span></div>
+    <div class="mode-tabs" role="tablist" aria-label="Planning mode"><a id="general-tab" role="tab" href="#general/all">General <span>The essentials</span></a><a id="customize-tab" role="tab" href="#customize/bedroom">Customize <span>Your space</span><span class="new-pill">Made to fit</span></a></div>
+    <div id="general-view" role="tabpanel" aria-labelledby="general-tab">
+      <section class="welcome"><div><span class="eyebrow">LESS GUESSWORK, MORE LIVING</span><h2>Your first home.<br>Start with the essentials.</h2><p>Buy what you need. Add what you love.</p><div class="retailers"><span>amazon<span class="amazon-smile">⌣</span></span><span class="target-logo">◉ Target</span><span>Walmart <b class="spark">✳</b></span><span class="ikea-logo">IKEA</span></div></div><div class="welcome-photo"><img src="https://www.ikea.com/images/43/2e/432e3e5f8300761ed4cecf99687550e3.jpg?f=xxxl" alt="A compact student room with a loft bed, desk and storage" fetchpriority="high"><a href="https://www.ikea.com/us/en/campaigns/starting-college/event-pub4550f730" target="_blank" rel="noopener noreferrer">Room inspiration / IKEA ↗</a></div></section>
+      <div class="workspace"><div class="workspace-main">
+        <section class="section-heading"><div><h2 id="room-title">Your move-in checklist</h2><p id="room-description">Check what your rental already includes, then mark the items you have ready.</p></div><span id="room-count" class="count-pill"></span></section>
+        <div class="filters"><div class="filter-buttons" aria-label="When to buy"><button class="active" data-priority="all">All</button><button data-priority="arrival">Arrival essentials</button><button data-priority="week">First week</button><button data-priority="later">Later on</button></div><label class="unfinished"><input type="checkbox" id="unfinished"> Still to get</label></div>
+        <div id="checklist"></div>
+        <section class="product-section"><div class="section-heading"><div><span class="eyebrow">THOUGHTFULLY PICKED</span><h2>A thoughtful shortlist</h2><p>Picked for your space, routine and starting budget. See why each one may fit.</p></div></div><div class="store-filters" id="store-filters" aria-label="Filter by retailer"></div><div id="products" class="product-grid"></div><p class="source-note">Products and specifications checked September 17, 2026. Prices are reference snapshots, excluding tax, delivery and assembly. Check Amazon prices on the product page. Current prices and availability depend on the retailer and your ZIP code.</p></section>
+      </div><aside class="summary" aria-label="Shopping progress and budget"><div id="progress-panel"></div><div class="budget-card"><div class="eyebrow">PLAN YOUR BUDGET</div><h3>Spend on what matters.</h3><label for="budget">My shopping budget <span>USD</span></label><div class="money-input"><span>$</span><input id="budget" type="number" min="100" max="50000" step="50" value="1500"></div><label for="budget-style">Shopping preference</label><select id="budget-style"><option value="balanced">Balanced</option><option value="save">Budget first</option><option value="comfort">Comfort first</option></select><div id="budget-summary"></div><p class="fine">Allowances for planning, not product prices. Rent, tax and shipping are not included.</p></div><div class="tip-card"><span class="eyebrow">BEFORE YOU BUY</span><h3>3 things to ask your landlord</h3><ol><li>Are a bed frame, mattress and desk included?</li><li>Is the dorm bed Twin or Twin XL?</li><li>Can you drill walls, change lights or use small appliances?</li></ol></div></aside></div>
+    </div>
+    <div id="customize-view" role="tabpanel" aria-labelledby="customize-tab" hidden></div>
+    <footer><a class="footer-brand" href="#general/all">settle in<span>Your move-in guide</span></a><p>Turn a new place into home, at your own pace.</p><span>Saved in this browser · No account needed</span></footer>
+  </main>
+</div>
+<dialog id="product-dialog"><button class="dialog-close" aria-label="Close product details">×</button><div id="product-detail"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

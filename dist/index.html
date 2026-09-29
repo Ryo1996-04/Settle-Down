@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Settle In 安居清單｜留學生的第一個家</title>
+  <meta name="description" content="依房間整理留學生採買清單，比較 Amazon、Target、Walmart 與 IKEA 商品，上傳平面圖規劃適合的家具尺寸。">
+  <meta name="theme-color" content="#194f45">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23194f45'/%3E%3Cpath d='M9 19L20 10L31 19V30H24V23H17V30H9Z' fill='%23dbed9b'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+  <script src="/language.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">跳至內容</a>
+<aside class="sidebar">
+  <a class="brand" href="#general/all"><span class="brand-mark">s<span>i</span></span><span>settle in<small>留學生活，慢慢安頓。</small></span></a>
+  <div class="sidebar-section">YOUR NEW CHAPTER</div>
+  <nav id="room-nav" aria-label="依房間用途瀏覽"></nav>
+  <div class="sidebar-card"><span class="eyebrow">MADE FOR YOUR SPACE</span><h3>小空間，也有<br>剛剛好的選擇。</h3><p>上傳平面圖，從尺寸開始<br>規劃你的新家。</p><a href="#customize/bedroom">配置我的房間 <span aria-hidden="true">↗</span></a></div>
+  <div class="sidebar-bottom"><span class="small-house">⌂</span><div>從抵達，到住得自在。<small>美國採買指南 · USD</small></div></div>
+</aside>
+<div class="shell">
+  <header class="topbar"><div class="breadcrumb">我的新生活 <span>/</span> <strong id="breadcrumb">採買規劃</strong></div><div class="top-meta"><label class="language-picker"><span>US /</span><select id="language" aria-label="Language / 語言"><option value="zh">繁體中文</option><option value="en">English</option></select></label><span class="avatar" aria-label="你的個人清單">S</span></div></header>
+  <main id="main">
+    <div class="page-heading"><div><div class="eyebrow">A LITTLE PLANNING. A BETTER BEGINNING.</div><h1>把新生活，一件件準備好<span>。</span></h1><p>從第一晚的床，到每天的咖啡，找到真正需要的好物。</p></div><span class="edition">THE MOVE-IN EDITION <span>01 / 美國篇</span></span></div>
+    <div class="mode-tabs" role="tablist" aria-label="規劃方式"><a id="general-tab" role="tab" href="#general/all">General <span>通用採買</span></a><a id="customize-tab" role="tab" href="#customize/bedroom">Customize <span>專屬空間</span><span class="new-pill">為你量身搭配</span></a></div>
+    <div id="general-view" role="tabpanel" aria-labelledby="general-tab">
+      <section class="welcome"><div><span class="eyebrow">LESS GUESSWORK, MORE LIVING</span><h2>你的第一個家，<br>從必需品開始。</h2><p>先買需要的，再慢慢添上喜歡的。</p><div class="retailers"><span>amazon<span class="amazon-smile">⌣</span></span><span class="target-logo">◉ Target</span><span>Walmart <b class="spark">✳</b></span><span class="ikea-logo">IKEA</span></div></div><div class="welcome-photo"><img src="https://www.ikea.com/images/43/2e/432e3e5f8300761ed4cecf99687550e3.jpg?f=xxxl" alt="以高架床、書桌與收納組成的小型學生房間" fetchpriority="high"><a href="https://www.ikea.com/us/en/campaigns/starting-college/event-pub4550f730" target="_blank" rel="noopener noreferrer">空間靈感 / IKEA ↗</a></div></section>
+      <div class="workspace"><div class="workspace-main">
+        <section class="section-heading"><div><h2 id="room-title">入住採買清單</h2><p id="room-description">先確認租屋處已有什麼，再勾選你準備好的物品。</p></div><span id="room-count" class="count-pill"></span></section>
+        <div class="filters"><div class="filter-buttons" aria-label="採買階段"><button class="active" data-priority="all">全部</button><button data-priority="arrival">抵達先買</button><button data-priority="week">一週內補齊</button><button data-priority="later">之後添購</button></div><label class="unfinished"><input type="checkbox" id="unfinished"> 只看未完成</label></div>
+        <div id="checklist"></div>
+        <section class="product-section"><div class="section-heading"><div><span class="eyebrow">THOUGHTFULLY PICKED</span><h2>幫你縮小選擇範圍</h2><p>依空間、用途與入門預算挑選，點開查看適合你的理由。</p></div></div><div class="store-filters" id="store-filters" aria-label="商品商店"></div><div id="products" class="product-grid"></div><p class="source-note">商品與規格於 2026/09/17 查詢；所列為來源頁參考價，不含稅、配送與組裝。Amazon 價格請至商品頁確認。實際價格及庫存以商店與郵遞區號為準。</p></section>
+      </div><aside class="summary" aria-label="採買進度與預算"><div id="progress-panel"></div><div class="budget-card"><div class="eyebrow">PLAN YOUR BUDGET</div><h3>錢花在需要的地方。</h3><label for="budget">我的採買預算 <span>USD</span></label><div class="money-input"><span>$</span><input id="budget" type="number" min="100" max="50000" step="50" value="1500"></div><label for="budget-style">採買取向</label><select id="budget-style"><option value="balanced">實用均衡</option><option value="save">省錢優先</option><option value="comfort">舒適優先</option></select><div id="budget-summary"></div><p class="fine">清單金額是規劃用估算，不是商品報價；不含房租、稅金與運費。</p></div><div class="tip-card"><span class="eyebrow">BEFORE YOU BUY</span><h3>先問房東的 3 件事</h3><ol><li>床架、床墊、書桌是否已附？</li><li>宿舍床是 Twin 還是 Twin XL？</li><li>可否鑽牆、換燈或使用小家電？</li></ol></div></aside></div>
+    </div>
+    <div id="customize-view" role="tabpanel" aria-labelledby="customize-tab" hidden></div>
+    <footer><a class="footer-brand" href="#general/all">settle in<span>安居清單</span></a><p>按你的步調，把陌生的地方變成家。</p><span>清單儲存在此瀏覽器 · 無需登入</span></footer>
+  </main>
+</div>
+<dialog id="product-dialog"><button class="dialog-close" aria-label="關閉商品詳情">×</button><div id="product-detail"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
